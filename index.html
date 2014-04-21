@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Denis Brumann</title>
+
+        <link href="vendor/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link href="css/dbrumann.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header" class="bg-primary">
+            <div class="container">
+                <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <h1 id="site-title">Denis Brumann</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="article">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <h3 class="page-header"><span class="glyphicon glyphicon-wrench"></span>&ensp;Projekte</h3>
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <a href="#" data-toggle="modal" data-target="#project-recherche">
+                                        <img src="img/projekte/recherche.png" alt="Recherche">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" data-toggle="modal" data-target="#project-bacmass">
+                                        <img src="img/projekte/bacmass.png" alt="BacMasS">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" data-toggle="modal" data-target="#project-vornamensuche">
+                                        <img src="img/projekte/vornamensuche.png" alt="Vornamensuche">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <h3 class="page-header"><span class="glyphicon glyphicon-user"></span>&ensp;Kontakt</h3>
+                        <ul class="nav nav-pills nav-justified">
+                            <li><a href="https://github.com/dbrumann"><img src="img/github.png" alt="github"> <small>dbrumann</small></a></li>
+                            <li><a href="mailto:dbrumann@gmail.com"><img src="img/google.png" alt="gmail"> <small>dbrumann@gmail.com</small></a></li>
+                            <li><a href="skype:d.brumann?chat"><img src="img/skype.png" alt="skype"> <small>d.brumann</small></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-recherche" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Online-Recherche des Universitätsarchivs Leipzig</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Die Recherche wuchs von einer einfachen PHP-Anwendung, die direkt mit einer Datenbank kommuniziert zu einer modularen MVC-Anwendung auf Basis von Symfony 2 unter Verwendung eines Elasticsearch-Clusters. Die über 10 Terabyte an bereitgestellten Digitalisaten verschiedensten Formats erforderten eine Abstraktion der Dateisystem-Schicht, um auf die verschiedenen Quellen (lokales Dateisystem, FTP, WebDAV) zugreifen zu können. Diese Abstraktion machte es auch möglich, auf die laufenden Scanarbeiten eines Auflicht-Buchscanners zuzugreifen und so Arbeitsprozesse der Retrokonversionebenfalls über die Recherche zu steuern.</p>
+                        <p>Der Import der Daten erfolgt entweder über ein Web-Backend oder eine Konsolen-Anwendung. Durch eine Ereignisgetriebene Verarbeitung der Quelldaten aus verschiede-nen Quellen (Datenbanken, Text- und PDF-Dateien) können diese flexibel für verschiedene Zielgruppen (Benutzer, Mitarbeiter, Forschungsprojekte) in den Elasticsearch-Cluster importiert und bereitgestellt werden.</p>
+                        <p>Darüber hinaus kommuniziert die Recherche über eine API mit dem Projektmanagement-System des UAL (eine JIRA-Instanz) und stellt Ressourcen für andere eigenentwickelte Dienste des UAL bereit.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="project-bacmass" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">BacMasS: Dokument-Verwaltung für Graduierungsarbeiten</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Die Entwicklung von BacMasS erfolgte in 2 Iterationen. Zuerst wurde ein einfacher Prototyp in PHP unter Verwendung des Silex Microframeworks realisiert. Für die Speicherung der Daten wurde MongoDB verwendet, zusätzliche kam eine ActiveMQ-MessageQueue zum Einsatz, um hochgeladene Dokumente außerhalb des Request-Response-Zyklus zu verarbeiten. Eine als Windows-Service operierende PHP Kommandozeilen-Anwendung verarbeitet die Nachrichten und übernimmt folgende Aufgaben:</p>
+                        <ul>
+                            <li>Text-Extraktion für eine spätere Volltextsuche über die gelagerten Dokumente,</li>
+                            <li>Automatische, strukturierte Verarbeitung des Deckblatts für eine erweiterte Suche nach verschiedenen Kriterien (Lehrstuhl, Betreuer, Abgabedatum, etc.)</li>
+                            <li>Ablage der Dateien im Dokumentenspeicher des UAL</li>
+                        </ul>
+                        <p>Auf Basis des ersten Prototyps wurde mit den Studienbüros über eventuelle Änderungswünsche sowie fakultäts- und institutsspezifischen Anpassungen besprochen.</p>
+                        <p>Für die 2. Iteration wurden Teile des ersten Prototyps in Symfony 2-Bundles ausgelagert, bei Bedarf refaktorisiert oder neu implementiert. Diese Symfony 2-Anwendung ging dann erneut in eine staging-Phase und wurde nach Zustimmung der Studienbüros in den Produktivbetrieb genommen.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="project-vornamensuche" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Vornamensuche</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Die Vornamensuche entstand innerhalb einer Woche als Demonstration, wie Daten aus mehreren Quellen zusammengefasst und abseits ihrer ursprünglichen Intention weiterverwendet werden können. Zur Überraschung des Archivs erfreute sich dieses Experiment regen Interesses unter anderem auch vom Lehrstuhl für Onomastik (Namenskunde).</p>
+                        <p>Die Vornamensuche richtet sich an unerfahrene Archiv-Benutzer und soll diesen veranschaulichen, wie viele (Personen-)Daten im UAL bereits digital erfasst wurden und wie diese Daten außerhalb ihres originären Kontextes verwendet werden können.</p>
+                        <p>Als Grundlage der Vornamensuche dienen verschiedene Bestände mit personenbezogenen Daten. Aus diesen Datensätzen wurden über eine Reihe von Skripten Titel, Namenszusätze und Nachnamen entfernt. Auf Basis dieser Daten wurden Statistiken über die Verteilung nach Geburtsjahr, häufigste Geburtsorte und Studienfächer und diese in einem Web-Frontend aufbereitet.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="vendor/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
